@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGODB_URI);
 app.use(cors());
 app.use(morgan('dev'));
 
-app.use(authorRouter);
+app.use(authRouter);
 app.use(errors);
 
 app.listen(PORT, () => {

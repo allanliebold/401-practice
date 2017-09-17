@@ -3,6 +3,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const createError = require('http-errors');
+const debug = require('debug')('note:server');
 const jsonParser = require('body-parser').json();
 
 const PORT = process.env.PORT || 3000;

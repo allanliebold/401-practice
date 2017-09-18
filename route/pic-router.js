@@ -46,7 +46,7 @@ picRouter.post('/api/gallery/:galleryID/pic', bearerAuth, upload.single('image')
     ACL: 'public-read',
     Bucket: process.env.AWS_BUCKET,
     Key: `${req.file.filename}${ext}`,
-    Body: fs.createReadStream(req.file.path
+    Body: fs.createReadStream(req.file.path)
   }
 
   Gallery.findById(req.params.galleryID)

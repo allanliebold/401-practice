@@ -40,7 +40,7 @@ picRouter.post('/api/gallery/:galleryID/pic', bearerAuth, upload.single('image')
     return next(createError(500, 'file not saved'));
   }
 
-  let ext = path extname(req.file.originalname);
+  let ext = path.extname(req.file.originalname);
 
   let params = {
     ACL: 'public-read',
